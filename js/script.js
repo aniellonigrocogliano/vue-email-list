@@ -4,6 +4,8 @@ createApp({
     data() {
         return {
             arrayEmail: [],
+            element:"",
+            flag:false,
         };
     },
     created() {
@@ -19,7 +21,10 @@ createApp({
                         console.log(resp);
                         this.arrayEmail[i] = resp.data.response;
                     });
+                    
             }
+            this.flag=true;
         },
+        
     },
 }).mount("#app");
