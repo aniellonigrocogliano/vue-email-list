@@ -11,9 +11,12 @@
     <title>Lista email</title>
 </head>
 <body>
-    <main id="app">
-        <div v-if="flag" v-for="item in arrayEmail" > {{item}}</div>
-        <div v-else>Caricamento in corso...</div>
+    <main id="app" class="container text-center">
+        <button @click="generateArray" type="button" class="btn btn-success m-3">Genera email</button>
+        <ul class="list-group">
+            <li class="list-group-item" v-if="flag===1" v-for="item in arrayEmail" > {{item}}</li>
+        <div v-if="flag===2">Caricamento in corso...</div>
+    </ul>
     </main>
      <!-- axios -->
      <script
