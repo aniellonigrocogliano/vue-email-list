@@ -12,7 +12,8 @@
 </head>
 <body>
     <main id="app">
-        <div v-for="item in arrayEmail" > {{item}}</div>
+        <div v-if="flag" v-for="item in arrayEmail" > {{item}}</div>
+        <div v-else>Caricamento in corso...</div>
     </main>
      <!-- axios -->
      <script
